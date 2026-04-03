@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(0,0,0,0.35);
+    padding: 30px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #00c6ff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.header {
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 38px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.solver-form {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.action-buttons button {
+    padding: 12px 20px;
+    margin: 10px 8px 0 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #00ff99;
+    font-weight: bold;
+}
+
+.card {
+    display: none;
+    margin-top: 25px;
+    background: rgba(255,255,255,0.12);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+pre {
+    font-size: 15px;
+    text-align: left;
+}

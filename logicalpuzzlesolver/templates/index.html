@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Puzzle Solver</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>Solver Panel</h2>
+
+        <button type="submit" form="solverForm">Solve Puzzle</button>
+        <button onclick="showInput()">Show Input</button>
+        <button onclick="showOutput()">Show Output</button>
+        <button onclick="showReason()">Show Reasoning</button>
+        <button type="reset" form="solverForm">Clear</button>
+    </div>
+
+    <div class="main-content">
+
+        <div class="header">
+            <h1>Logical Puzzle Solver</h1>
+            <p>AI Constraint Satisfaction Dashboard</p>
+        </div>
+
+        <form method="POST" id="solverForm" class="solver-form">
+
+            <select name="puzzle_type">
+                <option>Pet Puzzle</option>
+                <option>House Puzzle</option>
+            </select>
+
+            <input type="text" name="names" placeholder="alice,bob,charlie">
+
+            <input type="text" name="items" placeholder="dog,cat,fish">
+
+            <textarea name="constraints" placeholder="alice!=dog&#10;bob=cat"></textarea>
+
+        </form>
+
+        <div id="inputPanel" class="card" style="display:none;">
+            <h3>Input Data</h3>
+            <pre>{{ user_input }}</pre>
+        </div>
+
+        <div id="outputPanel" class="card large-output" style="display:block;">
+            <h3>Solution</h3>
+            <pre>{{ result }}</pre>
+        </div>
+
+        <div id="reasonPanel" class="card" style="display:none;">
+            <h3>System Reasoning</h3>
+            <pre>{{ reasoning }}</pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
